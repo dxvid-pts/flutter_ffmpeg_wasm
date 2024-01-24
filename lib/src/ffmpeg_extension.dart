@@ -29,8 +29,8 @@ extension FFmpegExtension on FFmpeg {
   /// Load FFmpeg core wasm module. Call this only once.
   ///
   /// Typically the load() func might take few seconds to minutes to complete, better to do it as early as possible.
-  Future<void> load() {
-    return promiseToFuture(_load());
+  Future<void> load(CreateFFmpegParam? createFFmpeg) {
+    return promiseToFuture(_load(createFFmpeg));
   }
 
   /// API to check where the core is loaded.
