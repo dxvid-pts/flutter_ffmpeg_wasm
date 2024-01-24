@@ -40,9 +40,12 @@ external FFmpeg createFFmpeg(CreateFFmpegParam? createFFmpeg);*/
 @JS()
 @staticInterop
 class FFmpeg {
-  /// External constructor to create an instance of FFmpeg
+  /// Private constructor to prevent direct instantiation
+  external FFmpeg._();
+
+  /// Factory constructor to create an instance of FFmpeg
   /// This corresponds to the `new FFmpeg()` in JavaScript.
-  external FFmpeg();
+  factory FFmpeg() => FFmpeg._();
 }
 
 @JS('fetchFile')
