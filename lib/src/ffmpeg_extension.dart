@@ -24,7 +24,7 @@ abstract class LoggerParam {
 
 extension FFmpegExtension on FFmpeg {
   @JS('load')
-  external dynamic _load();
+  external dynamic _load(CreateFFmpegParam? createFFmpeg);
 
   /// Load FFmpeg core wasm module. Call this only once.
   ///
