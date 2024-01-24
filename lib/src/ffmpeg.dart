@@ -19,7 +19,7 @@ abstract class CreateFFmpegParam {
   external String? get corePath;
 }
 
-@JS()
+/*@JS()
 @staticInterop
 abstract class FFmpeg {}
 
@@ -34,7 +34,16 @@ abstract class FFmpeg {}
 /// FFmpeg ffmpeg = createFFmpeg(CreateFFmpegParam(log: true, corePath: 'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js'));
 ///```
 @JS('createFFmpeg')
-external FFmpeg createFFmpeg(CreateFFmpegParam? createFFmpeg);
+external FFmpeg createFFmpeg(CreateFFmpegParam? createFFmpeg);*/
+
+/// Dart representation of the JavaScript FFmpeg class
+@JS()
+@staticInterop
+class FFmpeg {
+  /// External constructor to create an instance of FFmpeg
+  /// This corresponds to the `new FFmpeg()` in JavaScript.
+  external FFmpeg();
+}
 
 @JS('fetchFile')
 external dynamic _fetchFile(String url);
